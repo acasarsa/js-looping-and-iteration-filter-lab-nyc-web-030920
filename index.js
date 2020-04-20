@@ -6,15 +6,16 @@ function findMatching(arr, name) {
 }
 
 function fuzzyMatch(arr, letters) {
-  return arr.filter(function(elementChar) {
-    if (elementChar.substring(0, 2) === letters){
-      return elementChar
+  return arr.filter(function(char) {
+    if (char.substring(0, letters.length) === letters) {
+      return char
     }
   })
 }
 
 function matchName(arr, name) {
-  return arr.filter(function(obj){
+  return arr.filter(function(obj) {
     return obj.name.toLowerCase() === name.toLowerCase()
   })
 }
+
